@@ -1,52 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&display=swap');
 
-
-@import "compass/css3";
-
-.btn {
-	display: inline-block;
-	padding: 0.5em 1em;
-	background: #808080;
-	color: #fff;
-	margin: 1em;
-	&:hover,
-	&:focus {
-		color: #fff;
-		background: #333;
-	}
+:root {
+    --primary: #011627;
+    --accent: #2ec4b6;
 }
 
-.static-img {
-	display: block;
+* {
+    box-sizing: border-box;
 }
 
-iframe {
-	max-width: 100%;
-}
-/* From https://codepen.io/chriscoyier/full/kycDp */
-.map-container {
-	width: 100%;
-	margin: 0 auto;
-	height: 0;
-	padding-top: 38%;
-	position: relative;
-	display: none; /* Hide for small screens */
-	iframe {
-		width: 100%;
-		height: 100%; /* had to specify height/width */
-		position: absolute;
-		top: 0;
-		right: 0;
-		left: 0;
-		bottom: 0;
-	}
+body {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+    font-family: Raleway;
+    font-weight: 500;
 }
 
-/* Medium Screens */
-@media all and (min-width: 34.375em) {
-	.map-container {
-		display: block;
-	}
-	.static-img {
-		display: none;
-	}
+.nav-bar {
+	background-color: var(--primary);
+    width: 100%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+    align-items: stretch;
+}
+
+.nav {
+	padding: 20px 25px 15px;
+	color: #fdfffc;
+	text-align: center;
+    text-decoration: none;
+    border-bottom: 5px solid var(--primary);
+}
+
+.nav:hover {
+    background-color: var(--accent);
+    border-bottom: 5px solid var(--accent);
+}
+
+.active {
+    border-bottom: 5px solid var(--accent);
 }
